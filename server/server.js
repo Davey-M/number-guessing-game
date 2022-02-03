@@ -22,10 +22,24 @@ app.get('/newRandomNumber', (req, res) => {
 })
 
 // initializing Heather's guesses
-const heatherGuesses = [1, 4, 6, 3, 7]
+const heathersGuess = 4;
 
 // function to compare random number to Heather's guesses
-function 
+function compareGuesses(number){
+  console.log('in compareGuesses');
+  
+  if (number === randomNumber) {
+    return 'You got it!';
+  } else if (number > randomNumber) {
+    return 'Too high!';
+  } else if (number < randomNumber) {
+    return 'Too low!';
+  } 
+} // end compareGuesses
+
+console.log('Compare guesses with Heather guess', compareGuesses(heathersGuess));
+console.log('Random number', randomNumber);
+
 
 app.listen(PORT, () => {
   console.log ('Server is running on port', PORT)
