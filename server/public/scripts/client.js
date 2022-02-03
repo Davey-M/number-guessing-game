@@ -48,6 +48,11 @@ function getPreviousGuesses() {
     })
 }
 function addGuesses(guesses){
+  $('#heather-row').empty();
+  $('#leah-row').empty();
+  $('#dan-row').empty();
+  $('#dave-row').empty();
+
   for (let number of guesses.heather){
     $('#heather-row').append(`${number}, `);
   }
