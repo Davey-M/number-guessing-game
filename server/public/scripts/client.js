@@ -19,7 +19,12 @@ function getNumbers() {
 		method: "POST",
 		url: "/guess",
 		data: {
-			inputParams: {},
+			inputParams: {
+                heather: heatherGuess,
+                leah: leahGuess,
+                dan: danGuess,
+                dave: daveGuess,
+            },
 		},
 	};
 	$.ajax(settings);

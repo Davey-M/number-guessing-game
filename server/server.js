@@ -24,20 +24,27 @@ app.get('/newRandomNumber', (req, res) => {
 // // initializing Heather's guesses
 // const heathersGuess = 4;
 
-// app.post('/guess', (req,res) => {
-//   function compareGuesses(number){
-//     console.log('in compareGuesses');
+// req is what the client sent to the server
+app.post('/guess', (req,res) => {
+
+    // we want to see what the client sent to the server
+    console.log(req.body);
+
+    res.end();
+})
+// function to compare random number to Heather's guesses
+
+function compareGuesses(number){
+    console.log('in compareGuesses');
     
-//     if (number === randomNumber) {
-//       return 'You got it!';
-//     } else if (number > randomNumber) {
-//       return 'Too high!';
-//     } else if (number < randomNumber) {
-//       return 'Too low!';
-//     } 
-//   } // end compareGuesses
-// })
-// // function to compare random number to Heather's guesses
+    if (number === randomNumber) {
+      return 'You got it!';
+    } else if (number > randomNumber) {
+      return 'Too high!';
+    } else if (number < randomNumber) {
+      return 'Too low!';
+    } 
+} // end compareGuesses
 
 
 
