@@ -9,6 +9,11 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 25) + 1;
 }
 
+let heathersArray = [];
+let leahsArray = [];
+let dansArray = [];
+let davesArray = [];
+
 // This must be added before GET & POST routes.
 app.use(bodyParser.urlencoded({extended:true}))
 
@@ -43,6 +48,13 @@ app.post('/guess', (req,res) => {
         random: randomNumber,
     }
 
+      heathersArray.push(heathersGuess);
+      console.log('heathersArray', heathersArray);
+      
+      leahsArray.push(leahsGuess);
+      dansArray.push(dansGuess);
+      davesArray.push(davesGuess);
+
     res.send(validatedGuesses);
 })
 // function to compare random number to Heather's guesses
@@ -59,11 +71,8 @@ function compareGuesses(number){
     } 
 } // end compareGuesses
 
-
-
 // console.log('Compare guesses with Heather guess', compareGuesses(heathersGuess));
 // console.log('Random number', randomNumber);
-
 
 app.listen(PORT, () => {
   console.log ('Server is running on port', PORT)
