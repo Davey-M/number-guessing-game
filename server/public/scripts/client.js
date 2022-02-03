@@ -34,3 +34,14 @@ function getNumbers() {
         console.log(error);
     });
 }
+
+function getPreviousGuesses() {
+    $.ajax({
+        method: 'GET',
+        url: '/arrays',
+    }).then(function (res) {
+        console.log(res);
+    }).catch(function (error) {
+        console.log(error);
+    })
+}

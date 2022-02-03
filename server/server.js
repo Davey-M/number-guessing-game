@@ -73,6 +73,7 @@ function compareGuesses(number) {
 // console.log('Compare guesses with Heather guess', compareGuesses(heathersGuess));
 // console.log('Random number', randomNumber);
 
+
 app.get("/arrays", (req, res) => {
 	let array = {
 		heather: heathersArray,
