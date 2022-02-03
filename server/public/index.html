@@ -1,16 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Guess A Number!</title>
-  <script src="vendors/jquery.min.js"></script>
-  <script src="scripts/client.js"></script>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-</head>
-<body>
-    <h1>YOUR GAME HERE!</h1>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Guess A Number!</title>
+		<script src="vendors/jquery.min.js"></script>
+		<script src="scripts/client.js"></script>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<link
+			rel="shortcut icon"
+			href="images/favicon.ico"
+			type="image/x-icon"
+		/>
+	</head>
+	<body>
+		<h1>YOUR GAME HERE!</h1>
+		<div>
+			<p>Heather</p>
+			<input
+				type="number"
+				placeholder="guess"
+				id="heather-guess"
+				class=""
+			/>
+			<p>Leah</p>
+			<input type="number" placeholder="guess" id="leah-guess" class="" />
+			<p>Dan</p>
+			<input type="number" placeholder="guess" id="dan-guess" class="" />
+			<p>Dave</p>
+			<input type="number" placeholder="guess" id="dave-guess" class="" />
+			<button id="submit-button">Submit</button>
+			<button id="reset-button">Reset</button>
+		</div>
+
+		<div class="numberOfGuessContainer">
+			<h1 class="h2">Number of Guesses:</h1>
+		</div>
+
+		<div class="guessResults">
+			<h1 class="h2">Guess Results</h1>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Previous Guesses</th>
+						<th>Last Guess</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Heather</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Leah</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Dan</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Dave</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+        
+		<div class="winner-container">
+			<h1>Winner:</h1>
+		</div>
+	</body>
 </html>
