@@ -15,5 +15,19 @@ function getNumbers(){
   console.log('leah guess is', leahGuess);
   console.log('dan guess is', danGuess);
   console.log('dave guess is', daveGuess);
+  
+  let settings = {
+    method: 'POST',
+    url: '/guess',
+    data: {
+      inputParams: {
+        
+      }
+    }
+
+  }
+  $.ajax(settings)
 }
+
+
 
