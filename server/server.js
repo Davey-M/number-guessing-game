@@ -74,6 +74,16 @@ function compareGuesses(number){
 // console.log('Compare guesses with Heather guess', compareGuesses(heathersGuess));
 // console.log('Random number', randomNumber);
 
+app.get('/arrays', (req, res) => {
+  let array ={
+    heather: heathersArray, 
+    leah:leahsArray, 
+    dan: dansArray,
+    dave: davesArray 
+  }    
+  res.send(array);
+})
+
 app.listen(PORT, () => {
   console.log ('Server is running on port', PORT)
 })
