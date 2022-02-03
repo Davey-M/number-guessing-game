@@ -30,6 +30,7 @@ function getNumbers() {
 
 	$.ajax(settings).then(function (response) {
         console.log(response);
+        getPreviousGuesses();
     }).catch(function (error) {
         console.log(error);
     });
@@ -41,7 +42,22 @@ function getPreviousGuesses() {
         url: '/arrays',
     }).then(function (res) {
         console.log(res);
+       addGuesses(res); 
     }).catch(function (error) {
         console.log(error);
     })
+}
+function addGuesses(guesses){
+  for (let number of guesses.heather){
+    $('#heather-row').append(`${number}, `);
+  }
+  for (let number of guesses.leah){
+    $('#leah-row').append(`${number}, `);
+  }
+  for (let number of guesses.dan){
+    $('#dan-row').append(`${number}, `);
+  }
+  for (let number of guesses.dave){
+    $('#dave-row').append(`${number}, `);
+  }
 }
