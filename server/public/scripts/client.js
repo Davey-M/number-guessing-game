@@ -27,5 +27,10 @@ function getNumbers() {
             },
 		},
 	};
-	$.ajax(settings);
+	$.ajax(settings).then(function (response) {
+
+        console.log(response);
+    }).catch(function (error) {
+        console.log(error);
+    });
 }

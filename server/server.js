@@ -30,7 +30,20 @@ app.post('/guess', (req,res) => {
     // we want to see what the client sent to the server
     console.log(req.body);
 
-    res.end();
+    let heathersGuess = Number(req.body.inputParams.heather);
+    let leahsGuess = Number(req.body.inputParams.leah);
+    let dansGuess = Number(req.body.inputParams.dan);
+    let davesGuess = Number(req.body.inputParams.dave);
+
+    let validatedGuesses = {
+        heather: compareGuesses(heathersGuess),
+        leah: compareGuesses(leahsGuess),
+        dan: compareGuesses(dansGuess),
+        dave: compareGuesses(davesGuess),
+        random: randomNumber,
+    }
+
+    res.send(validatedGuesses);
 })
 // function to compare random number to Heather's guesses
 
