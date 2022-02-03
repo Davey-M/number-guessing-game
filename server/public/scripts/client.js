@@ -27,8 +27,8 @@ function getNumbers() {
             },
 		},
 	};
-	$.ajax(settings).then(function (response) {
 
+	$.ajax(settings).then(function (response) {
         console.log(response);
     }).catch(function (error) {
         console.log(error);
