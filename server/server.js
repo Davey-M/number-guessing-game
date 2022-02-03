@@ -21,24 +21,28 @@ app.get('/newRandomNumber', (req, res) => {
     res.sendStatus(201);
 })
 
-// initializing Heather's guesses
-const heathersGuess = 4;
+// // initializing Heather's guesses
+// const heathersGuess = 4;
 
-// function to compare random number to Heather's guesses
-function compareGuesses(number){
-  console.log('in compareGuesses');
-  
-  if (number === randomNumber) {
-    return 'You got it!';
-  } else if (number > randomNumber) {
-    return 'Too high!';
-  } else if (number < randomNumber) {
-    return 'Too low!';
-  } 
-} // end compareGuesses
+// app.post('/guess', (req,res) => {
+//   function compareGuesses(number){
+//     console.log('in compareGuesses');
+    
+//     if (number === randomNumber) {
+//       return 'You got it!';
+//     } else if (number > randomNumber) {
+//       return 'Too high!';
+//     } else if (number < randomNumber) {
+//       return 'Too low!';
+//     } 
+//   } // end compareGuesses
+// })
+// // function to compare random number to Heather's guesses
 
-console.log('Compare guesses with Heather guess', compareGuesses(heathersGuess));
-console.log('Random number', randomNumber);
+
+
+// console.log('Compare guesses with Heather guess', compareGuesses(heathersGuess));
+// console.log('Random number', randomNumber);
 
 
 app.listen(PORT, () => {
