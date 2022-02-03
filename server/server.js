@@ -21,6 +21,12 @@ app.get('/newRandomNumber', (req, res) => {
     res.sendStatus(201);
 })
 
+// initializing Heather's guesses
+const heatherGuesses = [1, 4, 6, 3, 7]
+
+// function to compare random number to Heather's guesses
+function 
+
 app.listen(PORT, () => {
   console.log ('Server is running on port', PORT)
 })
