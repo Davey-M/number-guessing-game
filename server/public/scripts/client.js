@@ -3,6 +3,8 @@ $(document).ready(handleReady);
 function handleReady() {
 	console.log("jquery is loaded!");
 	$("#submit-button").on("click", getNumbers);
+
+    $('#reset-button').hide();
 }
 
 function getNumbers() {
@@ -86,18 +88,22 @@ function renderLastResult(response) {
 
 	if (response.heather === "You got it!") {
 		$("#winner-container").text("Heather WINS!!!");
+        $('#reset-button').show('fast');
 	}
-
+    
 	if (response.leah === "You got it!") {
-		$("#winner-container").text("Leah WINS!!!");
+        $("#winner-container").text("Leah WINS!!!");
+        $('#reset-button').show('fast');
 	}
-
+    
 	if (response.dan === "You got it!") {
-		$("#winner-container").text("Dan WINS!!!");
+        $("#winner-container").text("Dan WINS!!!");
+        $('#reset-button').show('fast');
 	}
-
+    
 	if (response.dave === "You got it!") {
-		$("#winner-container").text("Dave WINS!!!");
+        $("#winner-container").text("Dave WINS!!!");
+        $('#reset-button').show('fast');
 	}
 }
 
