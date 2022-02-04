@@ -34,7 +34,7 @@ app.get('/reset', (req, res) => {
 
     randomNumber = getRandomNumber();
 
-    res.sendStatus(201);
+    res.sendStatus(200);
 })
 // // initializing Heather's guesses
 // const heathersGuess = 4;

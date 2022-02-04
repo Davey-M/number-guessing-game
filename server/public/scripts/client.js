@@ -5,6 +5,8 @@ function handleReady() {
 	$("#submit-button").on("click", getNumbers);
 
     $('#reset-button').hide();
+
+    $('#reset-button').on('click', resetGame);
 }
 
 function getNumbers() {
@@ -116,7 +118,15 @@ function countClicks(array) {
 function resetGame() {
 
     let options = {
-        
+        method: 'GET',
+        url: '/reset',
     }
 
+    $.ajax(options).then(response => {
+        console.log(response);
+    }).catch(error => {
+        console.log(error);
+    })
+
+    window.location.reload();
 }
