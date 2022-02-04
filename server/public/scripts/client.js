@@ -88,16 +88,16 @@ function renderLastResult(response) {
 		$("#winner-container").text("Heather WINS!!!");
 	}
 
-	if (response.heather === "You got it!") {
-		$("#winner-container").text("Heather WINS!!!");
+	if (response.leah === "You got it!") {
+		$("#winner-container").text("Leah WINS!!!");
 	}
 
-	if (response.heather === "You got it!") {
-		$("#winner-container").text("Heather WINS!!!");
+	if (response.dan === "You got it!") {
+		$("#winner-container").text("Dan WINS!!!");
 	}
 
-	if (response.heather === "You got it!") {
-		$("#winner-container").text("Heather WINS!!!");
+	if (response.dave === "You got it!") {
+		$("#winner-container").text("Dave WINS!!!");
 	}
 }
 
