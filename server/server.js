@@ -26,6 +26,16 @@ app.get("/newRandomNumber", (req, res) => {
 	res.sendStatus(201);
 });
 
+app.get('/reset', (req, res) => {
+    heathersArray = [];
+    leahsArray = [];
+    dansArray = [];
+    davesArray = [];
+
+    randomNumber = getRandomNumber();
+
+    res.sendStatus(201);
+})
 // // initializing Heather's guesses
 // const heathersGuess = 4;
 

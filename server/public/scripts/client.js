@@ -112,3 +112,11 @@ function countClicks(array) {
 	console.log("clicks are", clicks);
 	$("#click-count").text(clicks);
 }
+
+function resetGame() {
+
+    let options = {
+        
+    }
+
+}
