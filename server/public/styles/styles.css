@@ -5,3 +5,82 @@ table {
 td {
     border: 1px solid black;
 }
+
+/* POSITIONING */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.form-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* BLOCK STYLING */
+
+body {
+    background-color: rgb(99, 209, 173);
+}
+
+.numberOfGuessContainer {
+    background-color: darkcyan;
+    padding: 10px;
+}
+
+.guessResults {
+    background-color: darkcyan;
+}
+
+.winnerContainer {
+    background-image: ;
+}
+
+/* INNER ELEMENT STYLING */
+
+input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* FONT STYLING */
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.h2 {
+    background-image: none;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
