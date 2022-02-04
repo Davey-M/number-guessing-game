@@ -44,6 +44,7 @@ function getPreviousGuesses() {
     }).then(function (res) {
         console.log(res);
        addGuesses(res); 
+       countClicks(res.heather);
     }).catch(function (error) {
         console.log(error);
     })
@@ -79,3 +80,11 @@ function renderLastResult(response){
   $('#dan-result').text(`${response.dan}`);
   $('#dave-result').text(`${response.dave}`);
 }
+
+function countClicks(array){
+  let clicks = array.length;
+  console.log('clicks are', clicks);
+  $('#click-count').text(clicks);
+  
+}
+
