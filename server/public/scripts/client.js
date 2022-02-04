@@ -31,6 +31,7 @@ function getNumbers() {
 	$.ajax(settings).then(function (response) {
         console.log(response);
         getPreviousGuesses();
+        renderLastResult(response);
     }).catch(function (error) {
         console.log(error);
     });
@@ -54,15 +55,27 @@ function addGuesses(guesses){
   $('#dave-row').empty();
 
   for (let number of guesses.heather){
-    $('#heather-row').append(`${number}, `);
+    $('#heather-row').append(`${number} `);
   }
   for (let number of guesses.leah){
-    $('#leah-row').append(`${number}, `);
+    $('#leah-row').append(`${number} `);
   }
   for (let number of guesses.dan){
-    $('#dan-row').append(`${number}, `);
+    $('#dan-row').append(`${number} `);
   }
   for (let number of guesses.dave){
-    $('#dave-row').append(`${number}, `);
+    $('#dave-row').append(`${number} `);
   }
+}
+
+function renderLastResult(response){
+  $('#heather-result').empty();
+  $('#leah-result').empty();
+  $('#dan-result').empty();
+  $('#dave-result').empty();
+
+  $('#heather-result').text(`${response.heather}`);
+  $('#leah-result').text(`${response.leah}`);
+  $('#dan-result').text(`${response.dan}`);
+  $('#dave-result').text(`${response.dave}`);
 }
