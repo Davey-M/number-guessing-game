@@ -1,11 +1,3 @@
-table {
-    border: 1px solid black;
-}
-
-td {
-    border: 1px solid black;
-}
-
 /* POSITIONING */
 
 body {
@@ -20,15 +12,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
 }
 
-.form-container div {
+.input-fields {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 
@@ -41,14 +33,24 @@ body {
 .numberOfGuessContainer {
     background-color: darkcyan;
     padding: 10px;
+    width: 100%;
 }
 
 .guessResults {
-    background-color: darkcyan;
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .winnerContainer {
-    background-image: ;
+    background-image: url(/server/public/images/fireworks.gif);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 /* INNER ELEMENT STYLING */
@@ -56,10 +58,28 @@ body {
 input {
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin: 10px;
+    width: 5em;
+}
+table {
+    border: 1px solid darkcyan;
+}
+
+td {
+    border: 1px solid darkcyan;
+}
+
+tr, th, td {
+    color: darkcyan;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: darkcyan;
+    color: white;
 }
 
 /* FONT STYLING */
@@ -82,5 +102,25 @@ input {
     background-image: none;
     color: white;
     font-size: 24px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+}
+
+.h3 {
+    background-image: none;
+    color: darkcyan;
+    font-size: 20px;
+    text-align: center;
+} 
+
+.winner-container {
+    color: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+}
+
+p{
     text-align: center;
 }
