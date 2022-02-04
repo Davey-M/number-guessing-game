@@ -41,6 +41,15 @@ function getNumbers() {
 		.catch(function (error) {
 			console.log(error);
 		});
+
+    resetForm();
+}
+
+function resetForm() {
+    $("#heather-guess").val('');
+	$("#leah-guess").val('');
+	$("#dan-guess").val('');
+	$("#dave-guess").val('');
 }
 
 function getPreviousGuesses() {
@@ -128,5 +137,6 @@ function resetGame() {
         console.log(error);
     })
 
+    resetForm();
     window.location.reload();
 }
